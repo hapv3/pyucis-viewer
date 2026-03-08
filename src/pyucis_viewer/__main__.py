@@ -41,6 +41,9 @@ def main():
     app = QApplication(sys.argv)    
     main_win = MainWindow(data_model)
     
+    # Set the coverage file path for waive file association
+    main_win.set_coverage_file_path(args.file)
+    
     # Notify everyone that a new database is available
     data_model.load(db)
     
